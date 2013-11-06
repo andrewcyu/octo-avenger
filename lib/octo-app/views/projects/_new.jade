@@ -1,0 +1,7 @@
+extends ../../../common/views/layout
+
+block content
+  form#formAddProject(name="addproject",method="post",action="/projects/create")
+    input#inputProjectName(type="text", placeholder="Project Name", name="projectname")
+    input#inputProjectOwner(type="text", placeholder="Project Owner", name="projectowner")
+    button#btnSubmit(type="submit") submit

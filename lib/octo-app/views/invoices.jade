@@ -1,0 +1,16 @@
+extends ../../common/views/layout
+
+block content
+ h1 Invoices
+ table.table
+    thead
+      tr
+        th Name
+        th Hours
+    each invoice in invoices
+      tr
+        td= invoice.name
+        td= invoice.hours
+
+
+

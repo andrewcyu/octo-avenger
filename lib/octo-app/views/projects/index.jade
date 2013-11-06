@@ -1,0 +1,15 @@
+extends ../../../common/views/layout 
+
+block content
+ h1 Projects
+ table.table
+    thead
+      tr
+        th Project
+        th Owner
+    each proj in projects
+      tr
+        td= proj.project
+        td= proj.owner
+  p
+    a(href='/projects/new') New Projects!
