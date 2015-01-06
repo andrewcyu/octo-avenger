@@ -1,0 +1,18 @@
+extends ../../../common/views/layout
+
+block content
+ h1 Invoices
+ table.table
+    thead
+      tr
+        th Name
+        th Hours
+    each invoice in invoices
+      tr
+        td
+          a(href='/invoices/#{invoice.id}')=invoice.name
+        td= invoice.hours
+  p
+    a(href='/invoices/new') New Invoices!
+  p
+    a(href='/') Home

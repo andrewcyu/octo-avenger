@@ -1,0 +1,8 @@
+extends ../../../common/views/layout
+
+block content
+  form#formAddUser(name="adduser", method="post", action=action)
+    input#inputUserName(type="text", placeholder="User Name", name="name", value=user.name)
+    input#inputUserRole(type="text", placeholder="User Role", name="role", value=user.role)
+    button#btnSubmit(type="submit") Submit
+

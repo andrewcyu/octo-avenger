@@ -1,7 +1,9 @@
 extends ../../../common/views/layout
-
+// In forms the action specifies the route (where it goes to), in this case the variable 'action', which is actually defined as the specific route in controller (see res.render under Projects : new controller)
 block content
-  form#formAddProject(name="addproject",method="post",action="/projects/create")
-    input#inputProjectName(type="text", placeholder="Project Name", name="projectname")
-    input#inputProjectOwner(type="text", placeholder="Project Owner", name="projectowner")
+  form#formAddProject(name="addproject",method="post", action=action)
+    input#inputProjectName(type="text", placeholder="Project Name", name="name", value=project.name)
+    input#inputProjectOwner(type="text", placeholder="Project Owner", name="owner", value=project.owner)
     button#btnSubmit(type="submit") submit
+
+//- With forms, Express will take the contents and put them in "req.body", which we then call in 'create' controller

@@ -1,0 +1,16 @@
+extends ../../../common/views/layout
+
+block content
+ .row
+   .col-md-4
+     h1=project.name
+   .col-md-8
+     h1=project.owner
+  p
+    a(href='/projects') Back to Projects
+  p
+    a(href='/projects/#{project.id}/edit') Edit
+  p
+    form.center.form-inline.confirm(action="/projects/"+project.id, method="post")
+      input(type="hidden", name="_method", value="DELETE")
+      button.btn.btn-danger(type="submit") delete

@@ -1,0 +1,8 @@
+extends ../../../common/views/layout
+
+block content
+  h1 Check out Bootstrap!
+  form(name="addinvoice", method="post", action=action)
+    input(type="text", placeholder="User Name", name="name", value=invoice.name)
+    input(type="text", placeholder="Invoice Hours", name="hours", value=invoice.hours)
+    button(type="submit") Submit

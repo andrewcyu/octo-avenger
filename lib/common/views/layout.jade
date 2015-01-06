@@ -3,10 +3,13 @@ html
   head
     title= title
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
-  body
+  body(ng-app="myApp" ng-controller="MainCtrl")
     .container
       .row
         .col-md-12
           block content
+    script(type='text/javascript', src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js")
+    script(type='text/javascript', src="/bower_components/angular-moment/angular-moment.js")
+    script(type='text/javascript', src="/bower_components/moment/moment.js")
+    script(type='text/javascript', src="/public/javascript/app.js")
 
-    script (src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")

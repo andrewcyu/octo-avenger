@@ -1,0 +1,19 @@
+extends ../../../common/views/layout
+
+block content
+
+ h1 Users
+ table.table
+    thead
+      tr
+        th Name
+        th Role
+    each user in users
+      tr
+        td 
+          a(href='/users/#{user.id}')=user.name
+        td= user.role
+  p
+    a(href='/users/new') New Users!
+  p
+    a(href='/') Home

@@ -7,9 +7,13 @@ block content
       tr
         th Project
         th Owner
-    each proj in projects
+    //- 'projects' is the key for the array 'doc' in index controller
+    each project in projects  
       tr
-        td= proj.project
-        td= proj.owner
+        td
+          a(href='/projects/#{project.id}')=project.name
+        td= project.owner
   p
     a(href='/projects/new') New Projects!
+  p
+    a(href='/') Home
